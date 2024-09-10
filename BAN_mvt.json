@@ -58,7 +58,7 @@
       "maxzoom": 22,
       "filter": ["==", "certifie", false],
       "layout": {
-        "text-field": "eval(concat(tag(\"numero\"), \" \", tag(\"nomVoie\")))",
+        "text-field": "eval(concat(tag(\"numero\"), tag(\"suffixe\"), \" \", tag(\"nomVoie\")))",
         "text-font": ["Open Sans Regular"],
         "text-allow-overlap": true,
         "visibility": "visible",
@@ -103,7 +103,7 @@
       "maxzoom": 22,
       "filter": ["==", "certifie", true],
       "layout": {
-        "text-field": "eval(concat(tag(\"numero\"), \" \", tag(\"nomVoie\")))",
+        "text-field": "eval(concat(tag(\"numero\"), tag(\"suffixe\"), \" \", tag(\"nomVoie\")))",
         "text-font": ["Open Sans Regular"],
         "text-allow-overlap": true,
         "visibility": "visible",
