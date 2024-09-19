@@ -27,17 +27,17 @@
       "source": "adresse",
       "source-layer": "adresses",
       "minzoom": 13,
-      "maxzoom": 22,
+      "maxzoom": 24,
       "layout": {"visibility": "visible"},
-      "paint": {"text-color": "hsb_color(CRC32_checksum(tag(\"nomVoie\"))/4294967296.0, 0.7, 0.7)"}
+      "paint": {"text-color": "hsb_color(CRC32_checksum(tag(\"nomVoie\"))/4294967296.0, 1, 0.5)"}
     },
     {
-      "id": "certifie_point",
+      "id": "non_certifie_point",
       "type": "circle",
       "source": "adresse",
       "source-layer": "adresses",
       "minzoom": 13,
-      "maxzoom": 22,
+      "maxzoom": 24,
       "filter": ["==", "certifie", false],
       "layout": {"visibility": "visible"},
       "paint": {"circle-color": "prop(text-color, crc)", "circle-radius": 3, "circle-stroke-opacity": 0}
@@ -52,12 +52,11 @@
       "filter": ["==", "certifie", false],
       "layout": {
         "text-field": "numero",
-        "text-font": ["Open Sans Regular"],
         "text-allow-overlap": true,
         "visibility": "visible",
         "text-size": 14
       },
-      "paint": {"text-color": "prop(text-color, crc)"}
+      "paint": {"text-color": "prop(text-color, crc)", "text-halo-color": "white", "text-halo-width": 2}
     },
     {
       "id": "non_certifie_num_voie",
@@ -65,16 +64,15 @@
       "source": "adresse",
       "source-layer": "adresses",
       "minzoom": 19,
-      "maxzoom": 22,
+      "maxzoom": 24,
       "filter": ["==", "certifie", false],
       "layout": {
         "text-field": "eval(concat(tag(\"numero\"), tag(\"suffixe\"), \" \", tag(\"nomVoie\")))",
-        "text-font": ["Open Sans Regular"],
         "text-allow-overlap": true,
         "visibility": "visible",
         "text-size": 14
       },
-      "paint": {"text-color": "prop(text-color, crc)"}
+      "paint": {"text-color": "prop(text-color, crc)", "text-halo-color": "white", "text-halo-width": 2}
     },
     {
       "id": "certifie_point",
@@ -82,7 +80,7 @@
       "source": "adresse",
       "source-layer": "adresses",
       "minzoom": 13,
-      "maxzoom": 22,
+      "maxzoom": 24,
       "filter": ["==", "certifie", true],
       "layout": {"visibility": "visible"},
       "paint": {"circle-color": "prop(text-color, crc)", "circle-radius": 3, "circle-stroke-opacity": 0}
@@ -97,12 +95,11 @@
       "filter": ["==", "certifie", true],
       "layout": {
         "text-field": "numero",
-        "text-font": ["Open Sans Regular"],
         "text-allow-overlap": true,
         "visibility": "visible",
-        "text-size": 12
+        "text-size": 14
       },
-      "paint": {"text-color": "prop(text-color, crc)"}
+      "paint": {"text-color": "prop(text-color, crc)", "text-halo-color": "white", "text-halo-width": 2}
     },
     {
       "id": "certifie_num_voie",
@@ -110,16 +107,15 @@
       "source": "adresse",
       "source-layer": "adresses",
       "minzoom": 19,
-      "maxzoom": 22,
+      "maxzoom": 24,
       "filter": ["==", "certifie", true],
       "layout": {
         "text-field": "eval(concat(tag(\"numero\"), tag(\"suffixe\"), \" \", tag(\"nomVoie\")))",
-        "text-font": ["Open Sans Regular"],
         "text-allow-overlap": true,
         "visibility": "visible",
         "text-size": 14
       },
-      "paint": {"text-color": "prop(text-color, crc)"}
+      "paint": {"text-color": "prop(text-color, crc)", "text-halo-color": "white", "text-halo-width": 2}
     },
     {
       "id": "lieu-dit_point",
@@ -127,7 +123,7 @@
       "source": "adresse",
       "source-layer": "toponymes",
       "minzoom": 13,
-      "maxzoom": 22,
+      "maxzoom": 24,
       "filter": ["==", "type", "lieu-dit"],
       "layout": {"visibility": "visible"},
       "paint": {"circle-color": "black", "circle-radius": 3}
@@ -138,11 +134,10 @@
       "source": "adresse",
       "source-layer": "toponymes",
       "minzoom": 16,
-      "maxzoom": 22,
+      "maxzoom": 24,
       "filter": ["==", "type", "lieu-dit"],
       "layout": {
         "text-field": "\"nomVoie\"",
-        "text-font": ["Open Sans Regular"],
         "text-allow-overlap": true,
         "visibility": "visible",
         "text-size": 14
